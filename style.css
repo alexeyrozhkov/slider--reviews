@@ -1,0 +1,83 @@
+@font-face {
+    font-family: OpenSans;
+    src: url('./fonts/OpenSans-Regular.ttf');
+}
+
+.slider {
+    position: relative;
+    margin-top: 200px;
+}
+
+.button {
+    position: absolute;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+}
+
+.button:focus , 
+.button:active {
+    outline: none;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.left {
+    top: 150px;
+    left: 450px;
+}
+.right {
+    top: 150px;
+    right: 460px;
+}
+
+
+.icons {
+    width: 120px;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.reviews {
+    width: 500px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.icons-list , 
+.reviews-list {
+    display: flex;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: all 0.5s ease;
+}
+
+.icon {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+.review {
+    margin-right: 10px;
+    width: 490px;
+    height: 300px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 5%;
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    font-family: 'OpenSans';
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
