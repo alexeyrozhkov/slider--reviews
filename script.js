@@ -1,5 +1,6 @@
 const buttonRight = document.querySelector('.right');
 const buttonLeft = document.querySelector('.left');
+
 const reviewlist = document.querySelector('.reviews-list');
 const reviews = reviewlist.querySelectorAll('.review');
 
@@ -9,9 +10,12 @@ const icons = iconList.querySelectorAll('.icon');
 
 const REVIEW_TOTAL = reviews.length;
 const REVIEW_COUNT = 1;
+
 const reviewWidth = 500;
+
 const iconWidth = 40;
 const iconMargimRight = 52;
+
 let currentIndex = 2;
 
 function undisabledLeftButton() {
