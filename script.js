@@ -63,10 +63,12 @@ function setScale(index) {
 }
 
 function moveIconsRight() {
-    iconList.style.marginLeft = 0 - iconWidth - iconMargimRight + 'px';
+    const currentMarginLeft = parseInt( iconList.style.marginLeft);
+    iconList.style.marginLeft = currentMarginLeft - iconWidth - iconMargimRight + 'px';
 }
 function moveIconsLeft() {
-    iconList.style.marginLeft = 0 - iconWidth - iconMargimRight + 'px';
+    const currentMarginLeft = parseInt( iconList.style.marginLeft);
+    iconList.style.marginLeft = currentMarginLeft + iconWidth + iconMargimRight + 'px';
 }
 
 setScale(currentIndex);
@@ -78,7 +80,7 @@ buttonRight.onclick = function() {
     currentIndex++;
     const currentMarginLeft = parseInt(reviewlist.style.marginLeft);
     reviewlist.style.marginLeft = currentMarginLeft - reviewWidth + 'px';
-    moveIconsRight
+    moveIconsRight();
     undisabledLeftButton();
     if (shouldDisableRightButton()) {
         disableRightButton();
@@ -99,13 +101,5 @@ buttonLeft.onclick = function() {
 }
 
 
-for(let i=0; i < icons.length; i++) {
-    icons[i].onclick = function() {
-        currentIndex = i;
-        shouldDisableLeftButton() ? disableLeftButton() : undisabledLeftButton();
-        shouldDisableRightButton() ? disableRightButton() : undisabledRightButton();
-        reviewlist.style.marginLeft = 0 - reviewWidth * icons[currentIndex].dataset.number + "px";
-        setScale(currentIndex);
-    }
-}
+
 
