@@ -28,20 +28,22 @@
 }
 
 .left {
-    top: 150px;
+    top: 200px;
     left: 450px;
 }
 .right {
-    top: 150px;
+    top: 200px;
     right: 460px;
 }
 
 
 .icons {
-    width: 120px;
+    width: 500px;
     overflow: hidden;
     margin: auto;
     margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 .reviews {
     width: 500px;
@@ -57,13 +59,20 @@
     padding: 0;
     list-style: none;
     transition: all 0.5s ease;
+    align-items: center;
 }
 
 .icon {
-    margin-right: 5px;
-    width: 20px;
-    height: 20px;
+    margin-right: 52px;
+    width: 40px;
+    height: 40px;
 }
+
+.icon:last-child {
+    margin-right: 0;
+}
+
+
 .review {
     margin-right: 10px;
     width: 490px;
@@ -82,8 +91,21 @@
 img {
     max-width: 100%;
     max-height: 100%;
+    border-radius: 50%;
 }
 
 .disabled {
     opacity: 0.5;
+}
+
+
+.current {
+    width: 80px;
+    height: 80px;
+}
+
+.next,
+.previous {
+    width: 60px;
+    height: 60px;
 }
