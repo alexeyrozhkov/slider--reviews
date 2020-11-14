@@ -14,7 +14,7 @@ const REVIEW_COUNT = 1;
 const reviewWidth = 500;
 
 const iconWidth = 40;
-const iconMargimRight = 52;
+const iconMarginRight = 52;
 
 let currentIndex = 2;
 
@@ -68,11 +68,11 @@ function setScale(index) {
 
 function moveIconsRight() {
     const currentMarginLeft = parseInt( iconList.style.marginLeft);
-    iconList.style.marginLeft = currentMarginLeft - iconWidth - iconMargimRight + 'px';
+    iconList.style.marginLeft = currentMarginLeft - iconWidth - iconMarginRight + 'px';
 }
 function moveIconsLeft() {
     const currentMarginLeft = parseInt( iconList.style.marginLeft);
-    iconList.style.marginLeft = currentMarginLeft + iconWidth + iconMargimRight + 'px';
+    iconList.style.marginLeft = currentMarginLeft + iconWidth + iconMarginRight + 'px';
 }
 
 setScale(currentIndex);
