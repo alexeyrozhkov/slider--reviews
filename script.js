@@ -75,6 +75,17 @@ function moveIconsLeft() {
     iconList.style.marginLeft = currentMarginLeft + iconWidth + iconMarginRight + 'px';
 }
 
+function moveReviewRight() {
+    const currentMarginLeft = parseInt(reviewlist.style.marginLeft);
+    reviewlist.style.marginLeft = currentMarginLeft - reviewWidth + 'px';
+}
+
+function moveReviewLeft() {
+    const currentMarginLeft = parseInt(reviewlist.style.marginLeft);
+    reviewlist.style.marginLeft = currentMarginLeft + reviewWidth + 'px';
+}
+
+
 setScale(currentIndex);
 
 
@@ -82,8 +93,7 @@ setScale(currentIndex);
 
 buttonRight.onclick = function() {
     currentIndex++;
-    const currentMarginLeft = parseInt(reviewlist.style.marginLeft);
-    reviewlist.style.marginLeft = currentMarginLeft - reviewWidth + 'px';
+    moveReviewRight();
     moveIconsRight();
     undisabledLeftButton();
     if (shouldDisableRightButton()) {
@@ -94,8 +104,7 @@ buttonRight.onclick = function() {
 
 buttonLeft.onclick = function() {
     currentIndex--;
-    const currentMarginLeft = parseInt(reviewlist.style.marginLeft);
-    reviewlist.style.marginLeft = currentMarginLeft + reviewWidth + 'px';
+    moveReviewLeft();
     moveIconsLeft();
     undisabledRightButton();
     if (shouldDisableLeftButton()) {
